@@ -80,8 +80,9 @@ grid_res[rowMeans(data.frame(resd = rank(differ)*0.7,
                              complex = 0.3*rank(grid_res$iter/grid_res$comp_num))) %>%
            order(decreasing = F),] %>% head(5) #resorted dataframe
 
-
-# repeat minimum class
+#==========================================================================
+# Testing result (diameter) : repeat minimum class
+#==========================================================================
 rnd = split(nodes, ceiling(seq_along(nodes)/32))
 
 #set start bound
@@ -182,9 +183,11 @@ grid_res2[rowMeans(data.frame(resd = rank(differ)*0.7,
             order(decreasing = F),] %>% head(5)
 
 
-##########################################################################################
 
-#repeat minimum class
+#==========================================================================
+# Testing result (Radius) : repeat minimum class
+#==========================================================================
+
 set.seed(1004)
 rnd = split(nodes, ceiling(seq_along(nodes)/83))
 #set start bound
